@@ -1,0 +1,90 @@
+/* game board table */
+
+#board td {
+	width: 100px;
+	height: 100px;
+	border: solid 2px #666;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+/* pieces are div within game table cells: draw as colored circles -DONE*/
+.piece {
+	/* TODO: make into circles */
+	border-radius: 80%;
+	margin: 5px;
+	width: 90%;
+	height: 90%;
+	position: relative;
+}
+
+/* TODO: make pieces red/blue,  depending on player 1/2 piece - DONE*/
+.p1 {
+	background-color: blue;
+	background-image: url(donkey.jpg);
+	background-size: 100px 100px;
+}
+
+.p2 {
+	background-color: red;
+	background-image: url(shrek.jpg);
+	z-index: 1;
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+	border: dashed 2px lightgray;
+}
+
+#column-top td:hover {
+	background-color: gold;
+}
+
+body {
+	background-color: cornflowerblue;
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+#icon {
+	border-radius: 80%;
+	margin: 5px;
+	width: 90px;
+	height: 90px;
+	text-align: justify;
+}
+
+.slide-bottom {
+	-webkit-animation: slide-bottom 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-bottom 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-bottom {
+	0% {
+		-webkit-transform: translateY(-500px);
+		transform: translateY(-500px);
+	}
+	100% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+}
+@keyframes slide-bottom {
+	0% {
+		-webkit-transform: translateY(-500px);
+		transform: translateY(-500px);
+	}
+	100% {
+		-webkit-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+}
